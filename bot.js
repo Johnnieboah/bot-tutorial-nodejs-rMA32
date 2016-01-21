@@ -121,7 +121,7 @@ function respond() {
   }
       else if(request.text && botRegexDD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/pm");
+    postMessage("https://www.daddyleagues.com/pm");
     this.res.end();
   }
     else if(request.text && botRegexFYD1.test(request.text)) {
