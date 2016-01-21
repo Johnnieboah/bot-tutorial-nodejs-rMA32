@@ -39,9 +39,9 @@ function respond() {
     postMessage("https://www.reddit.com/r/PureMadden/comments/2zflir/rules/");
     this.res.end();
   } 
-  else if(request.text && botRegexGTA.test(request.text)) {
+  else if(request.text && botRegexMAJ.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/481x360.gif.135fa8292c6040e484b74a1cb80f9fd6");
+    postMessage("http://i.imgur.com/wxIXcD1.gifv");
     this.res.end();
   } 
   else if(request.text && botRegexSC.test(request.text)) {
