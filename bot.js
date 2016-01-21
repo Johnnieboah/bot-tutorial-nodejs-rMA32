@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DLD/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
       botRegexAd=/^\/vance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SCH/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/ROS/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSD=/^\/schedule/; botRegexmaj=/^\/maj/; botRegexWP=/^\/welcome pack/; botRegexYT=/^\/yt/; botRegexHL=/^\/highlight rules/; botRegexDD=/^\/DLP/;
+      botRegexSD=/^\/schedule/; botRegexmaj=/^\/maj/; botRegexWP=/^\/welcome pack/; botRegexYT=/^\/yt/; botRegexHL=/^\/highlight rules/; botRegexDD=/^\/DL/;
       botRegexFYD1=/^\/fyd/; botRegexFYD=/^\/FYD/;
       botRegexSiege = /^\/siege/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -121,7 +121,7 @@ function respond() {
   }
       else if(request.text && botRegexDD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://goo.gl/d0Xa6l");
+    postMessage("http://www.daddyleagues.com/pm");
     this.res.end();
   }
     else if(request.text && botRegexFYD1.test(request.text)) {
