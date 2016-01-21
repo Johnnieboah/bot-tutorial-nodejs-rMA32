@@ -115,7 +115,7 @@ function respond() {
   }
     else if(request.text && botRegexHL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://www.reddit.com/r/PureMadden/comments/2zflir/rules/");
+    postMessage("https://www.reddit.com/r/PureMadden/comments/40qg1d/how_to_send_in_highlights_updated_11216/");
     this.res.end();
   }
   else if(request.text && botRegexSiege.test(request.text)) {
