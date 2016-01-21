@@ -5,12 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/;  botRegexDL = /^\/PL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-      botRegexAd=/^\/vance/;botRegexMAJ = /^\/maj/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; 
-      botRegexCC = /^\/cc/; botRegexSR = /^\/hl rules/; botRegexYT = /^\/yt/; 
-      botRegexWP = /^\/Welcome Pack/;
-    
+      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+      botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -24,7 +21,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/pm/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/ma32/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -39,24 +36,24 @@ function respond() {
   }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://www.reddit.com/r/PureMadden/comments/2zflir/rules/");
+    postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
     this.res.end();
   } 
-  else if(request.text && botRegexMAJ.test(request.text)) {
+  else if(request.text && botRegexGTA.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://i.imgur.com/wxIXcD1.gifv");
+    postMessage("https://i.groupme.com/220x147.jpeg.a2dd2add32b14fff9e329535186d793c.large");
     this.res.end();
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/pm/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/ma32/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/pm/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/ma32/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
@@ -67,7 +64,7 @@ function respond() {
   } 
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.reddit.com/r/puremadden");
+    postMessage("http://www.reddit.com/r/maddenall32");
     this.res.end();
   } 
   else if(request.text && botRegexSh.test(request.text)) {
@@ -93,26 +90,6 @@ function respond() {
   else if(request.text && botRegexCC.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/851x1184.jpeg.330228901f684b0cb46cd1cef6953923");
-    this.res.end();
-  }
-  else if(request.text && botRegexSR.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://www.reddit.com/r/PureMadden/comments/40qg1d/how_to_send_in_highlights_updated_11216/");
-    this.res.end();
-  }
-  else if(request.text && botRegexYT.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://www.youtube.com/channel/UCvEO2R1EF6onhEHCA5fxDTA");
-    this.res.end();
-  }
-  else if(request.text && botRegexHL.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://www.reddit.com/r/PureMadden/comments/40qg1d/how_to_send_in_highlights_updated_11216/");
-    this.res.end();
-  }
-  else if(request.text && botRegexWP.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://imgur.com/a/jLCrY");
     this.res.end();
   }
   else if(request.text && botRegexSiege.test(request.text)) {
