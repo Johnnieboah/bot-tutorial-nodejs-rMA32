@@ -9,7 +9,7 @@ function respond() {
       botRegexAd=/^\/vance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SCH/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/ROS/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSD=/^\/schedule/; botRegexmaj=/^\/maj/; botRegexWP=/^\/welcome pack/; botRegexYT=/^\/yt/; botRegexHL=/^\/highlight rules/; botRegexDD=/^\/DL/;
-      botRegexFYD1=/^\/fyd/; botRegexFYD=/^\/FYD/; botRegexCOD=/^\/cody/;
+      botRegexFYD1=/^\/fyd/; botRegexFYD=/^\/FYD/; botRegexCOD=/^\/cody/;  botRegexKEV=/^\/kevin/;
       botRegexSiege = /^\/siege/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -101,7 +101,7 @@ function respond() {
   }
     else if(request.text && botRegexmaj.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://imgur.com/Ux0T3wn");
+    postMessage("https://i.groupme.com/481x360.gif.631cf814f7324b59a74f695b9f4f23dd");
     this.res.end();
   }
     else if(request.text && botRegexWP.test(request.text)) {
@@ -126,17 +126,22 @@ function respond() {
   }
     else if(request.text && botRegexFYD1.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://imgur.com/l9mrwhD");
+    postMessage("https://i.groupme.com/312x263.gif.8d2f0ad0fcfa48df957311f1b47b7c26");
     this.res.end();
   }
       else if(request.text && botRegexFYD1.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://imgur.com/l9mrwhD");
+    postMessage("https://i.groupme.com/312x263.gif.8d2f0ad0fcfa48df957311f1b47b7c26");
     this.res.end();
   }
      else if(request.text && botRegexCOD.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/158x218.png.d6ad70dc7324492fadf5eadc1a91740b");
+    this.res.end();
+  }
+       else if(request.text && botRegexKEV.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/200x153.gif.fc847e3fcfc845e5a83996a608930fe0");
     this.res.end();
   }
   else if(request.text && botRegexSiege.test(request.text)) {
