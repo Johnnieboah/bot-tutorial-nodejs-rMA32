@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DLD/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
       botRegexAd=/^\/vance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SCH/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/ROS/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSD=/^\/schedule/; botRegexmaj=/^\/maj/; botRegexWP=/^\/welcome pack/; botRegexYT=/^\/yt/; botRegexHL=/^\/highlight rules/; botRegexDD=/^\/DL/;
+      botRegexSD=/^\/Schedule/; botRegexmaj=/^\/maj/; botRegexWP=/^\/welcome pack/; botRegexYT=/^\/yt/; botRegexHL=/^\/highlight rules/; botRegexDD=/^\/DL/;
       botRegexFYD1=/^\/fyd/; botRegexFYD=/^\/FYD/; botRegexCOD=/^\/cody/;  botRegexKEV=/^\/kevin/; botRegex4TH=/^\/4th down rules/;
       botRegexSiege = /^\/siege/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -76,7 +76,7 @@ function respond() {
   } 
   else if(request.text && botRegexWk.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1kJqQWCq3RKiTrd4f71FFNKr-Y0ppJzjk0fSF0rP6Bto/edit?usp=sharing");
+    postMessage("https://docs.google.com/spreadsheets/d/1deFz_2E97L_yYDUP-LDqyG_TBKfWC_Lf0VGaVfyyp5g/edit?usp=sharing");
     this.res.end();
   } 
   else if(request.text && botODB.test(request.text)) {
