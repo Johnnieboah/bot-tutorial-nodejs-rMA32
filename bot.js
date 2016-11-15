@@ -48,7 +48,7 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/pm/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("https://docs.google.com/spreadsheets/d/1deFz_2E97L_yYDUP-LDqyG_TBKfWC_Lf0VGaVfyyp5g/edit?usp=sharing"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
