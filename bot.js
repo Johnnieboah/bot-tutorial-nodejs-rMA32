@@ -13,9 +13,9 @@ function respond() {
       botRegexSiege = /^\/siege/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
-  var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
-                ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
-                "MIA","BUF","SF","WAS","NYJ","TB"]
+  var teamAb = ["NE","NO","ARI","PHI","CLE","HUS","OAK","DAL","IND","SEA","CIN","PIT","OKC"
+                ,"BAL","SD","DEN","MIN","ATL","KC","SLC","GB","DET","HOU","STL","CHI","PDX",
+                "MIA","BUF","TOR","WAS","NYJ","TB"]
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -23,7 +23,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/pm/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/pure/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -55,7 +55,7 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/pm/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/pure/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
@@ -96,7 +96,7 @@ function respond() {
   }
   else if(request.text && botRegexSD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/pm/schedules");
+    postMessage("http://www.daddyleagues.com/pure/schedules");
     this.res.end();
   }
     else if(request.text && botRegexmaj.test(request.text)) {
@@ -121,7 +121,7 @@ function respond() {
   }
       else if(request.text && botRegexDD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://www.daddyleagues.com/pm");
+    postMessage("https://www.daddyleagues.com/pure");
     this.res.end();
   }
     else if(request.text && botRegexFYD1.test(request.text)) {
